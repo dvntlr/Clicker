@@ -23,6 +23,6 @@ function buytree(){
 
 window.setInterval (function() {
   console.log(Lemons)
-  Lemonsclick(Trees)*10;
+  Lemonsclick(Trees);
 
 }, 1000);
