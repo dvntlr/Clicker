@@ -1,6 +1,6 @@
 var Lemons = 0;
 
-function Lemonclick(number) {
+function Lemonsclick(number) {
   Lemons = Lemons + number;
   document.getElementById("LemonCount").innerHTML = Lemons
 };
@@ -15,7 +15,7 @@ function buytree(){
         Trees = Trees + 1;                                               //increases number of trees
     	  Lemons = Lemons - treecost;                                   //removes the Lemons spent
         document.getElementById('trees').innerHTML = Trees;            //updates the number of trees for the user
-        document.getElementById('LemonCount').innerHTML = Lemons;  //updates the number of Lemons for the user
+        document.getElementById('LemonsCount').innerHTML = Lemons;  //updates the number of Lemons for the user
     };
     var nextCost = Math.floor(10 * Math.pow(1.1,Trees));            //works out the cost of the next tree
     document.getElementById('treecost').innerHTML = nextCost;      //updates the tree cost for the user
@@ -23,6 +23,6 @@ function buytree(){
 
 window.setInterval (function() {
   console.log(Lemons)
-  Lemonclick(Trees);
+  Lemonsclick(Trees);
 
 }, 1000);
