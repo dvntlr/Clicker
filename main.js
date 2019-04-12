@@ -2,7 +2,7 @@ var Lemons = 0;
 
 function Lemonsclick(number) {
   Lemons = Lemons + number;
-  document.getElementById("LemonCount").innerHTML = Lemons
+  document.getElementById("LemonsCount").innerHTML = Lemons
 };
 
 var number = 1
@@ -23,6 +23,6 @@ function buytree(){
 
 window.setInterval (function() {
   console.log(Lemons)
-  Lemonsclick(Trees);
+  Lemonsclick(Trees*10);
 
 }, 1000);
