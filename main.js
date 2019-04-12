@@ -9,6 +9,26 @@ var number = 1
 
 var Trees = 0;
 
+var Savedata = {
+    lemons: Lemons,
+    trees: Trees
+  }
+
+function Save() {
+  localStorage.setItem("Save",JSON.stringify(Savedata));
+}
+
+function Load() {
+  var savegame = JSON.parse(localStorage.getItem("Save"));
+  if (typeof savegame.lemons !== "undefined") lemons = savegame.lemons;
+  if (typeof savegame.trees !== "undefined") trees = savegame.trees;
+}
+
+function Delete() {
+  localStorage.removeItem("Save")
+
+}
+
 function buytree(){
     var treecost = Math.floor(10 * Math.pow(1.1,Trees));                   //works out the cost of this tree
     if(Lemons >= treecost){                                              //checks that the player can afford the tree
@@ -24,5 +44,4 @@ function buytree(){
 window.setInterval (function() {
   console.log(Lemons)
   Lemonsclick(Trees*10);
-
 }, 1000);
